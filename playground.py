@@ -9,8 +9,8 @@ Created on Thu Jul 15 01:17:48 2021
 import Quantum as Q
 import matplotlib.image as im 
 
-N = 255
-img = Q.colour_drain(im.imread('lenna.jpg'))
+N = 255 # upper bound on image linear dimension. can change. 
+img = Q.colour_drain(im.imread('lenna.jpg')) # input the image name here
 if min((len(img), len(img[0]))) > N:
     img = Q.contract(img, N)
 
